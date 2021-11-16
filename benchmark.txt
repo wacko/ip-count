@@ -1,0 +1,8 @@
+20M IP addresses (1M possible different values)
+
+Implementation A:
+       user     system      total        real
+   0.302496   0.029214   0.331710 (  0.332392)
+
+Complexity:
+sort_by: O(n.log(n))
