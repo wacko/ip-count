@@ -15,6 +15,4 @@ end
 Benchmark.bm do |x|
   x.report("100x RequestCounter")         { 100.times{counter.top100} }
   x.report("100x AdvancedRequestCounter") { 100.times{counter2.top100} }
-  x.report("1x RequestCounter")           { counter.top100 }
-  x.report("1x AdvancedRequestCounter")   { counter2.top100 }
 end
