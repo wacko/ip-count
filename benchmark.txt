@@ -1,8 +1,20 @@
-20M IP addresses (1M possible different values)
+20M IP addresses (1M possible different IP values)
+Measuring top100 (100 times)
 
-Implementation A:
-       user     system      total        real
-   0.302496   0.029214   0.331710 (  0.332392)
+                              user     system      total        real
+RequestCounter           30.265158   1.511844  31.777002 ( 31.797295)
+AdvancedRequestCounter    9.332745   0.005819   9.338564 (  9.342161)
 
-Complexity:
-sort_by: O(n.log(n))
+
+Complexity
+RequestCounter:
+    sort_by: O(n.log(n))
+
+AdvancedRequestCounter
+    sort_by: O(n)
+
+
+100x RequestCounter         9609.365689  32.073290 9641.438979 (9645.400542)
+100x AdvancedRequestCounter  185.270969   0.079810  185.350779 ( 185.383806)
+  1x RequestCounter            3.701021   0.246489    3.947510 (   3.948083)
+  1x AdvancedRequestCounter    1.878546   0.000676    1.879222 (   1.879373)
